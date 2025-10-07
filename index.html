@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ezy Trip — Excursões e Viagens</title>
+  <meta name="description" content="Ezy Trip - Excursões saindo de Cotia. Pacotes, avaliações, galeria e contato."/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden>EZ</div>
+      <div>
+        <div style="font-weight:700">Ezy Trip</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.85)">Excursões • Cotia - SP</div>
+      </div>
+    </div>
+    <nav aria-label="Menu principal">
+      <a href="#home">Início</a>
+      <a href="#pacotes">Excursões</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#depoimentos">Avaliações</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <h1 id="hero-title">Excursões inesquecíveis saindo de Cotia</h1>
+        <p>Rotas confortáveis, guias experientes e passeios selecionados. Veja nossos pacotes com saída próxima de você.</p>
+        <div class="cta-row">
+          <button class="btn" id="ver-pacotes">pacotes e promoções</button>
+          <a class="btn secondary" href="#contato">Solicitar orçamento</a>
+        </div>
+      </div>
+      <aside class="card-hero" aria-label="Buscador de pacotes">
+        <h2 style="font-weight:700;">Busque sua excursão</h2>
+        <div class="search-row">
+          <input id="search-dest" type="text" placeholder="Destino (ex: Angra)">
+          <select id="search-month">
+            <option value="">Mês <img src="" alt=""></option>
+            <option>Setembro</option><option>Outubro</option><option>Novembro</option>
+            <option>Dezembro</option><option>Janeiro</option>
+          </select>
+          <button class="btn" id="search-btn"><img src="img/icons/search.png" alt="Buscar" id="iconSearch"></button>
+
+        </div>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button class="btn secondary" id="random-btn">Surpreenda-me</button>
+        </div>
+
+        <div class="carousel" style="margin-top:14px" aria-hidden="true">
+          <div class="carousel-track" id="hero-track">
+            <img class="carousel-slide" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80" alt="praia">
+            <img class="carousel-slide" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80" alt="montanha">
+            <img class="carousel-slide" src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15?auto=format&fit=crop&w=1400&q=80" alt="cidade">
+          </div>
+          <div class="dots" id="hero-dots"></div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- PACOTES -->
+    <section id="pacotes" aria-labelledby="pacotes-title">
+      <h2 id="pacotes-title">Nossas Excursões</h2>
+      <div class="cards" id="tours-grid">
+        <!-- cards gerados por JS -->
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" aria-labelledby="sobre-title">
+      <h2 id="sobre-title">Sobre a Ezy Trip</h2>
+      <p style="color:var(--muted);max-width:900px;margin:auto">
+        Somos uma agência local com foco em excursões guiadas, confortáveis e com roteiros pensados para todos os estilos.
+        Nossa equipe cuida de transporte, hospedagem e passeios — você só precisa aproveitar.
+      </p>
+      <div style="display:flex;gap:20px;justify-content:center;margin-top:20px;flex-wrap:wrap">
+        <div style="background:#fff;padding:18px;border-radius:12px;min-width:220px;box-shadow:0 8px 20px rgba(2,6,23,0.06)">
+          <strong>Guias experientes</strong>
+          <p style="color:var(--muted);margin-top:8px">Guias locais, experientes e fluentes.</p>
+        </div>
+        <div style="background:#fff;padding:18px;border-radius:12px;min-width:220px;box-shadow:0 8px 20px rgba(2,6,23,0.06)">
+          <strong>Transporte confortável</strong>
+          <p style="color:var(--muted);margin-top:8px">Ônibus e vans com segurança e higiene.</p>
+        </div>
+        <div style="background:#fff;padding:18px;border-radius:12px;min-width:220px;box-shadow:0 8px 20px rgba(2,6,23,0.06)">
+          <strong>Suporte 24/7</strong>
+          <p style="color:var(--muted);margin-top:8px">Assistência antes, durante e depois da viagem.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" aria-labelledby="galeria-title">
+      <h2 id="galeria-title">Fotos de viagens</h2>
+      <p style="color:var(--muted);max-width:900px;margin:auto">Momentos capturados em excursões reais com nossos clientes.</p>
+      <div class="gallery" id="gallery-grid" style="margin-top:18px">
+        <!-- imagens por JS -->
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" aria-labelledby="depoimentos-title">
+      <h2 id="depoimentos-title">O que nossos clientes dizem</h2>
+      <div class="reviews" id="reviews-track" style="margin-top:16px">
+        <!-- reviews por JS -->
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" aria-labelledby="contato-title">
+      <h2 id="contato-title">Solicite um orçamento</h2>
+      <form id="contact-form" onsubmit="return handleForm(event)">
+        <label for="name">Nome</label>
+        <input id="name" name="name" type="text" required placeholder="Seu nome completo">
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required placeholder="seu@email.com">
+
+        <label for="message">Mensagem / Pedido</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Para qual destino? Quantas pessoas?"></textarea>
+
+        <button type="submit" class="btn">Enviar solicitação</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Ezy Trip — Excursões • Cotia, SP · <small style="opacity:.9">Atendimento via WhatsApp</small></p>
+  </footer>
+
+  <!-- WhatsApp flutuante (adicione seu link em href abaixo) -->
+  <button class="whatsapp" id="whatsapp-btn" title="Falar no WhatsApp" aria-label="Falar no WhatsApp">
+    <!-- simples ícone -->
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M20.5 3.5L3.5 20.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <!-- Modal container -->
+  <div id="modal-root" aria-hidden style="display:none"></div>
+
+<script>
+/* ====== Dados de exemplo (substitua pelos seus) ====== */
+const TOURS = [
+  {
+    id:"ANG-0925-01",
+    title:"Angra dos Reis - Escuna e Ilhas",
+    short:"3 dias / 2 noites · Saída de Cotia",
+    price:1290,
+    img:"https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80",
+    features:["Traslado rodoviário","Pousada com café","Passeio de escuna","Guia local"]
+  },
+  {
+    id:"CAM-1025-01",
+    title:"Campos do Jordão - Fim de Semana",
+    short:"2 dias · Bate-volta opcional",
+    price:590,
+    img:"https://images.unsplash.com/photo-1549887534-316cc47dba5d?auto=format&fit=crop&w=1200&q=80",
+    features:["Transporte confortável","City tour","Fotos e paradas gastronômicas"]
+  },
+  {
+    id:"RIO-1125-01",
+    title:"Rio de Janeiro - City Tour Completo",
+    short:"3 dias / 2 noites · Hotel incluso",
+    price:1490,
+    img:"https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1200&q=80",
+    features:["Cristo Redentor","Pão de Açúcar","Praias e guia"]
+  }
+];
+
+const GALLERY = [
+  "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1523413651479-597eb2da0ad1?auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1556742208-999815fca738?auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1549887534-316cc47dba5d?auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1600359757069-8f5e91c0b87b?auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1535914254981-b5012eebbd15?auto=format&fit=crop&w=800&q=60"
+];
+
+const REVIEWS = [
+  {name:"Mariana S.", text:"Ótima organização! O passeio para Angra foi perfeito, guia excelente.", rating:5},
+  {name:"João P.", text:"Van confortável, horários cumpridos. Recomendo a Ezy Trip.", rating:5},
+  {name:"Fernanda L.", text:"Ótimo custo-benefício e suporte durante a viagem.", rating:4}
+];
+
+/* ====== UTILIDADES ====== */
+function el(tag, props={}, ...children){
+  const node = document.createElement(tag);
+  Object.entries(props).forEach(([k,v])=>{
+    if(k.startsWith("on") && typeof v === "function") node.addEventListener(k.substring(2).toLowerCase(), v);
+    else if(k==="html") node.innerHTML = v;
+    else node.setAttribute(k, v);
+  });
+  children.flat().forEach(c=> node.append(typeof c === "string" ? document.createTextNode(c) : c));
+  return node;
+}
+
+/* ====== CARDS DE TOURS ====== */
+const toursGrid = document.getElementById('tours-grid');
+TOURS.forEach(t=>{
+  const card = el('article',{class:"tour", role:"article"},
+    el('img',{src:t.img,alt:t.title,loading:"lazy"}),
+    el('div',{class:"body"},
+      el('h3',{},t.title),
+      el('p',{},t.short),
+      el('div',{class:"meta"},
+        el('div',{},el('span',{class:"badge"},`R$ ${t.price}`)),
+        el('div',{},el('button',{class:"btn", onClick:()=> openTourModal(t.id)}, "Saiba mais"))
+      )
+    )
+  );
+  toursGrid.appendChild(card);
+});
+
+/* ====== Modal de tour (detalhes) ====== */
+const modalRoot = document.getElementById('modal-root');
+function openTourModal(id){
+  const tour = TOURS.find(x=>x.id===id);
+  if(!tour) return;
+  modalRoot.innerHTML = '';
+  const backdrop = el('div',{class:'modal-backdrop', role:'dialog', 'aria-modal':'true'});
+  const modal = el('div',{class:'modal'},
+    el('div',{style:'display:flex;justify-content:space-between;align-items:center;margin-bottom:10px'},
+      el('h3',{},tour.title),
+      el('button',{class:'close-btn', onClick:closeModal},'\u2715')
+    ),
+    el('img',{src:tour.img,alt:tour.title}),
+    el('div',{style:'padding-top:10px'},
+      el('p',{},tour.short),
+      el('ul',{}, ...tour.features.map(f=>el('li',{},f))),
+      el('p',{}, el('strong',{},'Valor por pessoa: '), `R$ ${tour.price}`),
+      el('div',{style:'margin-top:12px;display:flex;gap:8px'},
+         el('button',{class:'btn', onClick:()=> reserveTour(t.id)}, 'Reservar via WhatsApp'),
+         el('button',{class:'btn secondary', onClick:closeModal}, 'Fechar')
+      )
+    )
+  );
+  backdrop.appendChild(modal);
+  modalRoot.appendChild(backdrop);
+  modalRoot.style.display = 'block';
+}
+function closeModal(){ modalRoot.style.display = 'none'; modalRoot.innerHTML = ''; }
+
+/* Simula abrir WhatsApp (troque o link pela sua URL com número) */
+function reserveTour(tourId){
+  const tour = TOURS.find(x=>x.id===tourId);
+  const text = encodeURIComponent(`Olá, quero reservar o pacote ${tour.title} (${tour.id}).`);
+  // troque o numero abaixo por seu telefone no formato https://wa.me/55DDDNÚMERO
+  const waLink = `https://wa.me/55SEUNUMERO?text=${text}`;
+  window.open(waLink, '_blank');
+}
+
+/* ====== GALERIA ====== */
+const galleryGrid = document.getElementById('gallery-grid');
+GALLERY.forEach((src,i)=>{
+  const img = el('img',{src,alt:`Foto ${i+1}`,loading:'lazy', onClick:()=> openImageModal(src)});
+  galleryGrid.appendChild(img);
+});
+
+function openImageModal(src){
+  modalRoot.innerHTML = '';
+  const backdrop = el('div',{class:'modal-backdrop', role:'dialog', 'aria-modal':'true'});
+  const modal = el('div',{class:'modal'},
+    el('div',{style:'display:flex;justify-content:flex-end'}, el('button',{class:'close-btn', onClick:closeModal},'\u2715')),
+    el('img',{src,alt:'Foto da galeria'})
+  );
+  backdrop.appendChild(modal);
+  modalRoot.appendChild(backdrop);
+  modalRoot.style.display = 'block';
+}
+
+/* ====== DEPOIMENTOS ====== */
+const reviewsTrack = document.getElementById('reviews-track');
+REVIEWS.forEach(r=>{
+  const stars = '★'.repeat(r.rating)+'☆'.repeat(5-r.rating);
+  const node = el('div',{class:'review'},
+    el('div',{}, el('strong',{}, r.name)),
+    el('p',{style:'color:var(--muted);margin-top:8px'}, r.text),
+    el('div',{style:'margin-top:12px;color:#f5a623;'}, stars)
+  );
+  reviewsTrack.appendChild(node);
+});
+
+/* ====== HERO CARROSSEL (arrastar e dots) ====== */
+(function heroCarousel(){
+  const track = document.getElementById('hero-track');
+  const dots = document.getElementById('hero-dots');
+  const slides = track.children;
+  let idx = 0, running = true, startX=0;
+  // criar dots
+  for(let i=0;i<slides.length;i++){
+    const d = el('div',{class:'dot', onClick:()=>{ idx=i; update(); }});
+    dots.appendChild(d);
+  }
+  function update(){
+    track.style.transform = `translateX(-${idx*100}%)`;
+    Array.from(dots.children).forEach((d,i)=> d.classList.toggle('active', i===idx));
+  }
+  function next(){ idx = (idx+1)%slides.length; update(); }
+  let timer = setInterval(next,4000);
+  // drag
+  track.addEventListener('mousedown', e=>{ startX = e.pageX; clearInterval(timer); });
+  track.addEventListener('mouseup', e=>{ const diff = e.pageX - startX; if(diff>50) idx = Math.max(0, idx-1); else if(diff<-50) idx = Math.min(slides.length-1, idx+1); update(); timer = setInterval(next,4000); });
+  // touch
+  track.addEventListener('touchstart', e=>{ startX = e.touches[0].pageX; clearInterval(timer); });
+  track.addEventListener('touchend', e=>{ const diff = e.changedTouches[0].pageX - startX; if(diff>50) idx = Math.max(0, idx-1); else if(diff<-50) idx = Math.min(slides.length-1, idx+1); update(); timer = setInterval(next,4000); });
+  update();
+})();
+
+/* ====== SEARCH + RANDOM ====== */
+document.getElementById('search-btn').addEventListener('click', ()=>{
+  const q = document.getElementById('search-dest').value.trim().toLowerCase();
+  if(!q){ alert('Digite um destino para buscar (ex: Angra)'); return; }
+  // simples filtro por nome
+  const found = TOURS.filter(t=> t.title.toLowerCase().includes(q));
+  if(found.length===0){ alert('Nenhum pacote encontrado para: '+q); return; }
+  // abrir modal do primeiro encontrado
+  openTourModal(found[0].id);
+});
+document.getElementById('random-btn').addEventListener('click', ()=>{
+  const i = Math.floor(Math.random()*TOURS.length);
+  openTourModal(TOURS[i].id);
+});
+document.getElementById('ver-pacotes').addEventListener('click', ()=> location.href='#pacotes');
+
+/* ====== CONTACT FORM (simples demonstração) ====== */
+function handleForm(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  if(!name || !email || !message){ alert('Preencha todos os campos'); return false; }
+  // aqui você pode enviar para um servidor, Google Sheets, ou abrir WhatsApp já preenchido
+  alert('Obrigado, '+name+'. Recebemos sua solicitação. Em breve entraremos em contato!');
+  e.target.reset();
+  return false;
+}
+
+/* ====== WhatsApp Button (adapte link) ====== */
+document.getElementById('whatsapp-btn').addEventListener('click', ()=>{
+  // Troque 'SEUNUMERO' pelo seu telefone no formato 5511999999999 (ex: 5511912345678)
+  const link = 'https://wa.me/55SEUNUMERO?text=' + encodeURIComponent('Olá, gostaria de informações sobre as excursões da Ezy Trip.');
+  window.open(link,'_blank');
+});
+
+/* ====== small accessibility: keyboard close modal ESC ====== */
+document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeModal(); });
+
+/* ====== animation on scroll (simple intersection) ====== */
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.12});
+document.querySelectorAll('section').forEach(s=>{
+  s.style.opacity = 0;
+  s.style.transform = 'translateY(30px)';
+  s.style.transition = 'all .9s ease';
+  observer.observe(s);
+});
+</script>
+</body>
+</html>
